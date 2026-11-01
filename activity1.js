@@ -57,7 +57,7 @@ function calculateResult() {
         history.innerHTML = expression;
         let result = eval(expression);
         
-        if (result == Infinity || isNaN(result)) {
+        if (result == infinity || isNaN(result)) {
             output.innerHTML = "Error";
         }
         else {
@@ -65,12 +65,12 @@ function calculateResult() {
         }
     }
     catch {
-        output.innerHTML = "Error";
+        output.innerHTML = "Error"
     }
 }
 for (let i = 0; i < number.length; i++) {
     number[i].addEventListener("click", displayNumber);
 }
-for (let i = 0; i < operators.length; i++) {
-    operators[i].addEventListener("click", displayOperator);
+for (let i = 0; i < operator.length; i++) {
+    operator[i].addEventListener("click", displayOperator);
 }
