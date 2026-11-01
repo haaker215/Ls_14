@@ -1,6 +1,6 @@
 let history = document.getElementById("history-value");
 let output = document.getElementById("output-value");
-let operators = document.getElementById("operator");
+
 
 function displayNumber() {
     output.innerHTML +=this.id;
@@ -36,7 +36,7 @@ function clearScreen() {
 
 }
 function removeNumber() {
-    output.innerHTML = oupu.innerHTML.slice(0-1);
+    output.innerHTML = output.innerHTML.slice(0,-1);
 
 }
 
@@ -57,19 +57,19 @@ function calculateResult() {
         history.innerHTML = expression;
         let result = eval(expression);
         
-        if (result == infinity || isNaN(result)) {
-            output.innerHTML = "Error"
+        if (result == Infinity || isNaN(result)) {
+            output.innerHTML = "Error";
         }
         else {
-            output.innerHTML = "result";
+            output.innerHTML = result;
         }
     }
     catch {
-        output.innerHTML = "Error"
+        output.innerHTML = "Error";
     }
 }
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener("click", displayNumber);
+for (let i = 0; i < number.length; i++) {
+    number[i].addEventListener("click", displayNumber);
 }
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener("click", displayOperator);
