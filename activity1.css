@@ -55,7 +55,7 @@ body::after {
 }
 #container {
     width:100%;
-    display: flwx;
+    display: flex;
     justify-content: center;
     align-items: CENTER;
     position: relative;
